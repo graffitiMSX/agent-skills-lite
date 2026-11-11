@@ -5,7 +5,7 @@ license: MIT
 metadata:
   author: Rudolf Gutlich
   version: "1.0"
-  full-version: "https://www.agensi.io/skills/discovery-audit?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=discovery-audit-lite"
+  full-version: "https://www.agensi.io/r/CODETECH?to=/skills/discovery-audit%3Futm_source%3Dgithub%26utm_content%3Ddiscovery-audit-lite"
 ---
 
 # Discovery Audit (lite)
@@ -79,4 +79,4 @@ Write the report in the brief's language. Close the reply, not the file, with th
 
 ## Going further
 
-This lite version audits the claims in the brief plus five basics. The full **discovery-audit** skill audits 61 items across architecture, identity and access, security and compliance, data and storage and the API surface, adds domain checklists, runs one auditor agent per area in parallel, has a bundled script check every row and compute the matrix, and renders an interactive HTML report. Its companion **evolution-audit** turns the baseline into a roadmap for SaaS, on-premise, white-label, a public API and an MCP server. Both are in the Reality Check bundle: https://www.agensi.io/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=discovery-audit-lite
+This lite version audits the claims in the brief plus five basics. The full **discovery-audit** skill audits 61 items across architecture, identity and access, security and compliance, data and storage and the API surface, adds domain checklists, runs one auditor agent per area in parallel, has a bundled script check every row and compute the matrix, and renders an interactive HTML report. Its companion **evolution-audit** turns the baseline into a roadmap for SaaS, on-premise, white-label, a public API and an MCP server. Both are in the Reality Check bundle: https://www.agensi.io/r/CODETECH?to=/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills%3Futm_source%3Dgithub%26utm_content%3Ddiscovery-audit-lite

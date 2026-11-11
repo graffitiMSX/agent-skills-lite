@@ -4,9 +4,9 @@ Three free skills for AI coding agents that read a codebase the way a senior rev
 
 | Skill | What it does | Full version |
 |---|---|---|
-| [design-review-lite](skills/design-review-lite/SKILL.md) | Six-lens review (architecture, backend, database, front-end, UX, security): the ten findings that matter most and a 0–10 grade per lens | [design-review](https://www.agensi.io/skills/design-review?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=readme) |
-| [discovery-audit-lite](skills/discovery-audit-lite/SKILL.md) | What the code really does versus what the pitch claims: implemented, partial, absent or undetermined, with evidence | [Reality Check bundle](https://www.agensi.io/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=readme) |
-| [evolution-audit-lite](skills/evolution-audit-lite/SKILL.md) | How far the product is from SaaS, on-premise, white-label, a public API and an MCP server, and what to build next | [Reality Check bundle](https://www.agensi.io/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=readme) |
+| [design-review-lite](skills/design-review-lite/SKILL.md) | Six-lens review (architecture, backend, database, front-end, UX, security): the ten findings that matter most and a 0–10 grade per lens | [design-review](https://www.agensi.io/r/CODETECH?to=/skills/design-review%3Futm_source%3Dgithub%26utm_content%3Dreadme) |
+| [discovery-audit-lite](skills/discovery-audit-lite/SKILL.md) | What the code really does versus what the pitch claims: implemented, partial, absent or undetermined, with evidence | [Reality Check bundle](https://www.agensi.io/r/CODETECH?to=/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills%3Futm_source%3Dgithub%26utm_content%3Dreadme) |
+| [evolution-audit-lite](skills/evolution-audit-lite/SKILL.md) | How far the product is from SaaS, on-premise, white-label, a public API and an MCP server, and what to build next | [Reality Check bundle](https://www.agensi.io/r/CODETECH?to=/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills%3Futm_source%3Dgithub%26utm_content%3Dreadme) |
 
 They follow the open [Agent Skills format](https://agentskills.io/specification), so they run in any agent that supports it: Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and others. Each skill is a single `SKILL.md` with no scripts and no dependencies.
 
@@ -49,14 +49,14 @@ The lite skills are a single pass by one agent. The full versions add what makes
 | Output | One markdown file | Markdown report plus an interactive HTML page |
 | Next steps | Up to you | A pipeline that plans the fixes, files GitHub issues, dispatches fix agents and re-reviews |
 
-- **Ship-Ready**, seven skills from audit to merged fixes: https://www.agensi.io/bundles/ship-ready-ai-code-audit-to-merged-fixes-10-skills?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=readme
-- **Reality Check**, discovery-audit and evolution-audit: https://www.agensi.io/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=readme
-- Free full skills that complete the pipeline: [plan-to-issues](https://www.agensi.io/skills/plan-to-issues?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=readme), [dispatch-fixes](https://www.agensi.io/skills/dispatch-fixes?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=readme), [design-memory](https://www.agensi.io/skills/design-memory?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=readme)
-- Everything by the author: https://www.agensi.io/creators/rudolf-gutlich?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=readme
+- **Ship-Ready**, seven skills from audit to merged fixes: https://www.agensi.io/r/CODETECH?to=/bundles/ship-ready-ai-code-audit-to-merged-fixes-10-skills%3Futm_source%3Dgithub%26utm_content%3Dreadme
+- **Reality Check**, discovery-audit and evolution-audit: https://www.agensi.io/r/CODETECH?to=/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills%3Futm_source%3Dgithub%26utm_content%3Dreadme
+- Free full skills that complete the pipeline: [plan-to-issues](https://www.agensi.io/r/CODETECH?to=/skills/plan-to-issues%3Futm_source%3Dgithub%26utm_content%3Dreadme), [dispatch-fixes](https://www.agensi.io/r/CODETECH?to=/skills/dispatch-fixes%3Futm_source%3Dgithub%26utm_content%3Dreadme), [design-memory](https://www.agensi.io/r/CODETECH?to=/skills/design-memory%3Futm_source%3Dgithub%26utm_content%3Dreadme)
+- Everything by the author: https://www.agensi.io/r/CODETECH?to=/creators/rudolf-gutlich%3Futm_source%3Dgithub%26utm_content%3Dreadme
 
 ## Author
 
-Rudolf Gutlich. [LinkedIn](https://www.linkedin.com/in/rgutlich) · [Agensi](https://www.agensi.io/creators/rudolf-gutlich?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=readme)
+Rudolf Gutlich. [LinkedIn](https://www.linkedin.com/in/rgutlich) · [Agensi](https://www.agensi.io/r/CODETECH?to=/creators/rudolf-gutlich%3Futm_source%3Dgithub%26utm_content%3Dreadme)
 
 ## License
 

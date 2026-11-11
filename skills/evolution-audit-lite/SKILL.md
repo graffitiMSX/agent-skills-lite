@@ -5,7 +5,7 @@ license: MIT
 metadata:
   author: Rudolf Gutlich
   version: "1.0"
-  full-version: "https://www.agensi.io/skills/evolution-audit?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=evolution-audit-lite"
+  full-version: "https://www.agensi.io/r/CODETECH?to=/skills/evolution-audit%3Futm_source%3Dgithub%26utm_content%3Devolution-audit-lite"
 ---
 
 # Evolution Audit (lite)
@@ -73,4 +73,4 @@ Write the report in the baseline's language. Keep each initiative under about 12
 
 ## Going further
 
-This lite version gives a readiness snapshot and five initiatives. The full **evolution-audit** skill assesses every on-premise mode item by item (connected, controlled dependencies, air-gapped), designs the MCP server with a tool table, approvals and an agent-security checklist, grades eight competitive moats on evidence, and builds a phased eight-stage roadmap where every initiative cites the baseline gap it closes. A bundled script refuses missing modes, unapproved execute tools and dependency loops. It comes with **discovery-audit** in the Reality Check bundle: https://www.agensi.io/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=evolution-audit-lite
+This lite version gives a readiness snapshot and five initiatives. The full **evolution-audit** skill assesses every on-premise mode item by item (connected, controlled dependencies, air-gapped), designs the MCP server with a tool table, approvals and an agent-security checklist, grades eight competitive moats on evidence, and builds a phased eight-stage roadmap where every initiative cites the baseline gap it closes. A bundled script refuses missing modes, unapproved execute tools and dependency loops. It comes with **discovery-audit** in the Reality Check bundle: https://www.agensi.io/r/CODETECH?to=/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills%3Futm_source%3Dgithub%26utm_content%3Devolution-audit-lite
