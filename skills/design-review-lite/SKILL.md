@@ -5,7 +5,7 @@ license: MIT
 metadata:
   author: Rudolf Gutlich
   version: "1.0"
-  full-version: "https://www.agensi.io/skills"
+  full-version: "https://www.agensi.io/skills/design-review?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=design-review-lite"
 ---
 
 # Design Review (lite)
@@ -78,4 +78,4 @@ Keep each finding under about 120 words. A finding about something missing (no r
 
 ## Going further
 
-This is the single-pass version. The full **design-review** skill runs six specialist reviewer agents in parallel, grades 57 aspects instead of six lenses, has a bundled script recompute every score and reject a grade that breaks its cap, maps security to the OWASP Top 10, analyses every data store under failure (CAP), respects the decisions your team already recorded, and renders an interactive HTML report. It is the first stage of a pipeline that plans the fixes, files them as GitHub issues, dispatches fix agents and re-reviews to show how the score moved: https://www.agensi.io/skills
+This is the single-pass version. The full **design-review** skill runs six specialist reviewer agents in parallel, grades 57 aspects instead of six lenses, has a bundled script recompute every score and reject a grade that breaks its cap, maps security to the OWASP Top 10, analyses every data store under failure (CAP), respects the decisions your team already recorded, and renders an interactive HTML report. It is the first stage of a pipeline that plans the fixes, files them as GitHub issues, dispatches fix agents and re-reviews to show how the score moved: https://www.agensi.io/skills/design-review?utm_source=github&utm_medium=referral&utm_campaign=lite-launch&utm_content=design-review-lite
