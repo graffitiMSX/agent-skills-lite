@@ -17,9 +17,9 @@ Inspection and planning only: no code, configuration or external state changes, 
 ## Steps
 
 1. **Load the baseline.** Use a `discovery-audit-lite.md` (or a full discovery audit) when there is one. Without one, offer to run discovery-audit-lite first; planning without a baseline guesses at the starting point. If the user declines, read the README, manifests, routes and models and say in the report that the baseline is informal.
-2. **Ask what the repo cannot show** and use only what the user answers: target customers, pilots, pricing ideas, competitors, deadlines, team size. Missing answers stay unknown; never invent them. Market and competitor statements are Inferences unless the user supplied them.
-3. **Assess readiness** for each target below, marked `[x]` ready, `[~]` partial, `[ ]` not ready or `[?]` unknown, each with evidence from the code and the blocker that matters most.
-4. **Pick five initiatives** and answer the eight questions, then write the report. Critical security or data-loss gaps from the baseline come first; a later step never hides one.
+2. **Ask what the repo cannot show** and use only what the user answers: target customers, pilots, pricing ideas, competitors, deadlines, team size. Missing answers stay unknown; never invent them. When the user cannot answer, list the questions in the report header and carry on. Market and competitor statements are Inferences unless the user supplied them.
+3. **Define the product's shape** in one line before grading: a tool sold to organizations, a two-sided marketplace, an internal system. Say who the tenant is and what "SaaS" means for it (for a marketplace, usually the seller's company and the seller's subscription). Then **assess readiness** for each target below, marked `[x]` ready, `[~]` partial, `[ ]` not ready or `[?]` unknown, each with evidence from the code and the blocker that matters most.
+4. **Pick five initiatives** and answer the eight questions, then write the report. Order them P0 gaps first, then exploitable security P1s, then revenue and the rest; a later step never hides a P0.
 
 ## Targets
 
@@ -38,10 +38,10 @@ Inspection and planning only: no code, configuration or external state changes, 
 ```
 # Evolution audit (lite): <product>
 
-Baseline: <report path and commit, or "informal">.
+Baseline: <report path and commit, or "informal">. Audited commit, date, facts the user supplied and those left unknown.
 
 ## Readiness
-| Target | State | Evidence | Main blocker | Effort (S/M/L) |
+| Target | State | Evidence | Main blocker | Effort (S/M/L; two values when the scope splits, e.g. "M one brand / L many") |
 
 ## External dependencies
 | Dependency | Used for | Breaks on-premise connected? | Breaks air-gapped? |
@@ -49,8 +49,11 @@ Baseline: <report path and commit, or "informal">.
 ## MCP candidates
 | Tool | Kind | Approval | Backed by |
 
+Approval is `none` (read only), `user` (the caller confirms), `human` (a person approves outside the agent, enforced by the server) or `excluded` (not offered to agents now).
+
 ## Next five initiatives
 ### 1. Make every query tenant-scoped
+- What: what gets built or changed
 - Why: the gap it closes, citing the baseline
 - Depends on · Complexity (low/medium/high) · Risk
 - Done when: an objective, checkable criterion
@@ -66,7 +69,7 @@ Baseline: <report path and commit, or "informal">.
 8. What should not be built now?
 ```
 
-Write the report in the baseline's language. Close the reply with the eight answers and the first two initiatives.
+Write the report in the baseline's language. Keep each initiative under about 120 words. Close the reply, not the file, with the eight answers and the first two initiatives.
 
 ## Going further
 
