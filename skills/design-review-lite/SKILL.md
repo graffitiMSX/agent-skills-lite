@@ -1,6 +1,6 @@
 ---
 name: design-review-lite
-description: Quick evidence-based design review of a codebase through six lenses (architecture, backend reliability, database, front-end, UX and security) in a single pass, ending in the ten findings that matter most and a 0–10 grade per lens. Use when the user asks for a quick architecture, reliability or security review, "is this production-ready", "what would break first", or a first look at an unfamiliar repo.
+description: Quick evidence-based design review of a codebase through six lenses (architecture, backend reliability, database, front-end, UX and security) in a single pass, ending in the ten findings that matter most and a 0–10 grade per lens. Use when the user asks for a quick architecture, reliability or security review, "is this production-ready", "what would break first", a first look at an unfamiliar repo, or a review of one branch or pull request before it merges.
 license: MIT
 metadata:
   author: Rudolf Gutlich
@@ -23,10 +23,11 @@ A single-pass review of an application through six lenses. It reads the code and
 
 ## Steps
 
-1. **Orient.** Read the README, the dependency manifests, the entry points, the route definitions and the data models. In a large repo you will not read everything: read the code on the paths where money, identity and data change hands, and search the rest. Write a five-line system map: runtime, frameworks, data stores, external services, how requests and jobs flow. Skip the front-end and UX lenses when there is no client code, and the database lens when the app keeps no data of its own, and say so.
-2. **Run the six lenses**, one after another, with the questions below. Note candidate findings as you go.
-3. **Keep the ten that matter most.** Rank by realistic impact and likelihood, not by how interesting they are. List the runners-up in one line each under "Also noted"; they still count toward the grades. Each finding has one lens, the one where the fix lives; name others it touches in the text. Severity: Critical (severe data loss, broad compromise, irreversible financial impact), High (corruption, duplicate side effects, cross-tenant exposure, major outage under realistic conditions), Medium (localized, recoverable), Low (defense in depth).
-4. **Grade each lens** from 0 to 10 with the rubric below, then write the report.
+1. **Set the scope.** By default the review covers the whole repo. When the user names a branch, a pull request or "my changes", review the change instead: diff it against its base (`git diff <base>...<branch>`, or the PR's diff when the agent can fetch it), and ask for the base when it is not obvious. Findings must sit in the changed code or in code the change now calls or breaks; a problem the change did not touch goes under "Also noted" at most. Read beyond the diff anyway: the callers, the data models and the checks that should guard what changed, since most of what this review hunts for lives between files.
+2. **Orient.** Read the README, the dependency manifests, the entry points, the route definitions and the data models. In a large repo you will not read everything: read the code on the paths where money, identity and data change hands, and search the rest. Write a five-line system map: runtime, frameworks, data stores, external services, how requests and jobs flow. Skip the front-end and UX lenses when there is no client code, and the database lens when the app keeps no data of its own, and say so.
+3. **Run the six lenses**, one after another, with the questions below. Note candidate findings as you go.
+4. **Keep the ten that matter most.** Rank by realistic impact and likelihood, not by how interesting they are. List the runners-up in one line each under "Also noted"; they still count toward the grades. Each finding has one lens, the one where the fix lives; name others it touches in the text. Severity: Critical (severe data loss, broad compromise, irreversible financial impact), High (corruption, duplicate side effects, cross-tenant exposure, major outage under realistic conditions), Medium (localized, recoverable), Low (defense in depth).
+5. **Grade each lens** from 0 to 10 with the rubric below, then write the report.
 
 ## Lenses
 
@@ -49,14 +50,14 @@ A single-pass review of an application through six lenses. It reads the code and
 | 3–4 | Weak. Several High, or a Critical with partial mitigation. |
 | 0–2 | Unsafe or absent. An unmitigated Critical, or the control does not exist. |
 
-Three or more Medium findings in one lens count as compounding (5–6). A Confirmed or Likely Critical finding caps its lens at 3, a High at 6. Grade what you looked at; write `not assessed` for a lens you could not inspect. Show each gauge as ten segments: `▰▰▰▰▰▰▱▱▱▱ 6/10`. The overall score is the mean of the graded lenses, to one decimal, under the same caps, and says which lenses it covers and whether a cap changed it.
+Three or more Medium findings in one lens count as compounding (5–6). A Confirmed or Likely Critical finding caps its lens at 3, a High at 6. Grade what you looked at; write `not assessed` for a lens you could not inspect. On a branch or PR, grade only the lenses the change touches, judging the system as the change leaves it, and write `not touched by this change` for the rest. Show each gauge as ten segments: `▰▰▰▰▰▰▱▱▱▱ 6/10`. The overall score is the mean of the graded lenses, to one decimal, under the same caps, and says which lenses it covers and whether a cap changed it.
 
 ## Report
 
 ```
 # Design review (lite): <app>
 
-Scope: commit <sha> (or "working tree"), <date>, paths left out and why.
+Scope: commit <sha> (or "working tree"), or <branch> against <base> for a change; <date>; paths left out and why.
 Overall: ▰▰▰▰▰▱▱▱▱▱ 5.2/10 (6 lenses; mean 5.2, the cap of 6 from High findings does not bind)
 
 ## System map
