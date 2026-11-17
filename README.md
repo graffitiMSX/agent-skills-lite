@@ -1,12 +1,13 @@
 # Agent Skills (lite)
 
-Three free skills for AI coding agents that read a codebase the way a senior reviewer or a due-diligence auditor would: with evidence for every claim, and without changing a line.
+Four free skills for AI coding agents that read a codebase the way a senior reviewer, a due-diligence auditor or an attacker would: with evidence for every claim, and without changing a line.
 
 | Skill | What it does | Full version |
 |---|---|---|
 | [design-review-lite](skills/design-review-lite/SKILL.md) | Six-lens review (architecture, backend, database, front-end, UX, security): the ten findings that matter most and a 0–10 grade per lens | [design-review](https://www.agensi.io/r/CODETECH?to=/skills/design-review%3Futm_source%3Dgithub%26utm_content%3Dreadme) |
 | [discovery-audit-lite](skills/discovery-audit-lite/SKILL.md) | What the code really does versus what the pitch claims: implemented, partial, absent or undetermined, with evidence | [Reality Check bundle](https://www.agensi.io/r/CODETECH?to=/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills%3Futm_source%3Dgithub%26utm_content%3Dreadme) |
 | [evolution-audit-lite](skills/evolution-audit-lite/SKILL.md) | How far the product is from SaaS, on-premise, white-label, a public API and an MCP server, and what to build next | [Reality Check bundle](https://www.agensi.io/r/CODETECH?to=/bundles/reality-check-what-your-app-really-is-and-how-it-grows-2-skills%3Futm_source%3Dgithub%26utm_content%3Dreadme) |
+| [break-it-lite](skills/break-it-lite/SKILL.md) | Works only from the spec and the code and tries to break the backend, front end and infra: every break with steps to reproduce and the test that proves it | [Everything by the author](https://www.agensi.io/r/CODETECH?to=/creators/rudolf-gutlich%3Futm_source%3Dgithub%26utm_content%3Dreadme) |
 
 They follow the open [Agent Skills format](https://agentskills.io/specification), so they run in any agent that supports it: Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and others. Each skill is a single `SKILL.md` with no scripts and no dependencies.
 
@@ -33,6 +34,7 @@ Ask your agent in plain words; the skill loads when the request matches.
 Review this repo. Is it production-ready?
 Here is our pitch: <paste>. What is actually built?
 How far are we from an on-premise version and an MCP server?
+Here is the PRD: <paste>. Try to break the app against it.
 ```
 
 Each skill writes one markdown report at the repo root. Run discovery-audit-lite before evolution-audit-lite: the roadmap starts from the baseline the first one writes.
